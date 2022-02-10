@@ -1,31 +1,33 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-import cake1 from '../img/cake1.jpg';
-import cake2 from '../img/cake2.jpg';
-import cake3 from '../img/cake3.jpg';
-import cake4 from '../img/cake4.jpg';
-import cake5 from '../img/cake5.jpg';
-import cake6 from '../img/cake6.jpg';
+import images from './images';
 
 
-
- const cakes = [cake1,cake2,cake3,cake4,cake5,cake6];
-
-
- 
-
- 
 
 function MainUI() {
-
-    const [image, setImage] = useState(0)
+    console.log(images)
   return( <div>
+  
       This will be the center ui, showing images of cakes
-      {/* <button onClick={setImage(image+1)}>cakes</button> */}
-      <img src={cakes[2]} />
-  </div>
+      <div className='Slideshow' >
+      <motion.div className='Carousel'>
+        <motion.div className='inner-carousel'>
+        {images.map(image => {
+          return(
+            <motion.div>
+              <img src={image} alt=""/>
+            </motion.div>
+          );
+        }) }
 
+
+        </motion.div>
+      </motion.div>
+      </div>
+  
+  </div>
   )
 }
 export default MainUI;

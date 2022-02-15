@@ -122,6 +122,7 @@ font-size: small;
 grid-area: lsidebar;
 }
 .rightbar{
+font-size: small;
 grid-area: rsidebar;
 }
 .body{

@@ -11,9 +11,9 @@ function MainUI() {
   const [width, setWidth] = useState(0);
   const carousel =  useRef();
   // replace these with numbers corresponding to the total width of all images in carousel
-  useEffect(() => {setWidth(carousel.current.scrollWidth-carousel.current.offsetWidth);},[]);
-    console.log(images)
-    console.log(width)
+  // useEffect(() => {setWidth(carousel.current.scrollWidth-carousel.current.offsetWidth);},[]);
+  //   console.log(images)
+  //   console.log(width)
 
   return( <div>
       
@@ -23,7 +23,7 @@ function MainUI() {
         {images.map(image => {
           return(
             <motion.div className='item'>
-              <img src={image} alt=""/>
+              <img src={image} alt="Maybe if you wish REALLY hard... or hit ctrl+r, a cake will appear here"/>
             </motion.div>
           );
         }) }

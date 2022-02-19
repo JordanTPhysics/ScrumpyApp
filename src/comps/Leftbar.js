@@ -13,6 +13,7 @@ function Leftbar() {
                 <Logout/>
                 <Profile/>
                 </div>
+                <div><p>Here I can place a paragraph with some additional information, maybe a calendar/availability scheme or something to do with pricing...</p></div>
                 </div>
   )
 }
